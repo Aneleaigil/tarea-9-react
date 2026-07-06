@@ -1,0 +1,131 @@
+.carrusel {
+    position: relative; /* Esencial para que los hijos con absolute se posicionen aquí */
+    width: 100%;
+    height: 500px; /* Define una altura fija o usa aspect-ratio */
+    overflow: hidden;
+}
+
+.sliderImage { /* Cambiamos a camelCase por buena práctica, pero slider__image funciona igual */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sliderCaption {
+    position: absolute;
+    padding: 20px;
+    bottom: 20%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.sliderControl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #D8DBD7;
+    color: rgb(43, 63, 52);
+    border: none;
+    border-radius: 40px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.controlPrev { left: 20px; }
+.controlNext { right: 20px; }
+
+.indicadoresContainer {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.indicador.active {
+    background-color: white;
+}
+
+/* ESTILOS DE LAS CARDS */
+
+.features {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 48px 100px;
+    background-color: #F8FAF6;
+}
+
+.featuresHeader {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 32px;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 16px;
+    background: #E1E3DF;
+    border: 1px solid rgba(191, 201, 193, 0.2);
+    border-radius: 24px;
+    position: relative;
+    height: auto;
+    top: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.cardImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
