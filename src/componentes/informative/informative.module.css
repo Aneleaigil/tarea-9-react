@@ -1,0 +1,98 @@
+
+.informative{
+    background-color:var(--color-bg-claro);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+    padding: 48px 16px;
+}
+
+.informativeImage{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.informativeCard{
+    width: 100%;
+    max-width: 600px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badges{
+    display: flex;
+    flex-direction:row;
+    gap: 16px;
+    align-items: flex-start;
+    min-height: 150px;
+   
+}
+.badgesCard{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    align-items: flex-start;
+    border: 1px solid #E3E7E2;
+    background-color: #F2F4F0;
+    border-radius: 16px;
+    height: 160px;
+}
+
+.badgesHeaderCard{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-direction: column;
+}
+.badgesTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.badgesText {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+    /* SECTION INFORMATIVE PANTALLAS MOBILES*/
+
+@media (max-width: 1024px) { 
+
+    .informative {
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 16px;
+        }
+    
+        .badgesCard{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+        gap: 24px;
+        flex-wrap: wrap;
+        }
+    
+       .badges{
+        flex-direction: column;
+        align-items: center;
+       }
+
+       h3.informativeTitle{    
+        text-align: center; 
+    }
+
+     
+    }
